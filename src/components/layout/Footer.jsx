@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -60,11 +61,28 @@ export default function Footer() {
             </div>
         </div>
 
-        <div className="max-w-7xl mx-auto pt-6 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400">
-            <p className="text-center md:text-left mb-4 md:mb-0">&copy; 2026 Soul Springs. All Rights Reserved.</p>
-            <div className="flex gap-4">
+        <div className="max-w-7xl mx-auto pt-6 border-t border-gray-200 flex flex-col gap-4 md:flex-row md:justify-between md:items-center text-xs text-gray-400">
+            <p className="text-center md:text-left">&copy; 2026 Soul Springs. All Rights Reserved.</p>
+            <div className="flex flex-wrap items-center justify-center gap-4 md:justify-end">
                 <Link href="/faq" className="hover:text-brand-dark transition">FAQ</Link>
                 <Link href="/privacy-policy" className="hover:text-brand-dark transition">Privacy Policy</Link>
+                <a
+                    href="https://vishwalabs.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Built by Vishwa Labs (opens in a new tab)"
+                    className="group inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/70 px-2.5 py-1.5 text-[11px] font-medium text-gray-500 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:border-brand-accent/40 hover:text-brand-dark hover:shadow-md focus:outline-none focus:ring-2 focus:ring-brand-accent/30"
+                >
+                    <Image
+                        src="https://vishwalabs.com/logoemail.png"
+                        alt=""
+                        width={20}
+                        height={20}
+                        sizes="20px"
+                        className="rounded-full transition-transform duration-300 group-hover:rotate-6 group-hover:scale-105"
+                    />
+                    <span>Built by <span className="font-semibold text-brand-dark">Vishwa Labs</span></span>
+                </a>
             </div>
         </div>
     </footer>
